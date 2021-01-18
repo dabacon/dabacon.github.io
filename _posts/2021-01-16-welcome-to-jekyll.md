@@ -8,5 +8,3 @@ categories: jekyll update
 First post.
 
 Testing math $$E = \gamma mc^2$$
-
-Testing YouTube {% youtube 16ZfkPRVf2w %}
