@@ -13,7 +13,7 @@
     <macro name="title-macro">
         <choose>
             <if variable="title">
-                <text variable="title" prefix="*" suffix="*"/>
+                <text variable="title" prefix="**" suffix="**"/>
             </if>
             <else>
                 <text value="**No title**"/>
@@ -44,12 +44,9 @@
     </macro>
     <citation>
         <layout delimiter="">
-            <text value="&gt; "/>
-            <group delimiter=", ">
-                <text macro="title-macro"/>
-                <names variable="author"/>
-                <text macro="url-macro"/>
-            </group>
+            <text macro="title-macro"/>
+            <names variable="author"/>
+            <text macro="url-macro"/>
         </layout>
     </citation>
 </style>
