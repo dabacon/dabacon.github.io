@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+    <info>
+        <title>Simple Markdown</title>
+        <title-short>smarkdown</title-short>
+        <id>http://www.zotero.org/styles/smarkdown</id>
+        <author>
+            <name>Dave Bacon</name>
+        </author>
+        <updated>2019-01-29T20:00:00+00:00</updated>
+        <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+    </info>
+    <macro name="title-macro">
+        <choose>
+            <if variable="title">
+                <text variable="title" prefix="*" suffix="*"/>
+            </if>
+            <else>
+                <text value="**No title**"/>
+            </else>
+        </choose>
+    </macro>
+    <macro name="url-macro">
+        <choose>
+            <if variable="URL">
+                <text variable="URL" prefix="[" suffix="]"/>
+                <text variable="URL" prefix="(" suffix=")"/>
+            </if>
+            <else>
+                <text value="**No URL**"/>
+            </else>
+        </choose>
+    </macro>
+    <macro name="url-macro">
+        <choose>
+            <if variable="URL">
+                <text variable="URL" prefix="[" suffix="]"/>
+                <text variable="URL" prefix="(" suffix=")"/>
+            </if>
+            <else>
+                <text value="**No URL**"/>
+            </else>
+        </choose>
+    </macro>
+    <citation>
+        <layout delimiter="">
+            <text value="&gt; "/>
+            <group delimiter=", ">
+                <text macro="title-macro"/>
+                <names variable="author"/>
+                <text macro="url-macro"/>
+            </group>
+        </layout>
+    </citation>
+</style>
